@@ -8,7 +8,7 @@ export class qrCode extends LitElement {
 		return html`
 			<article>
 				<header>
-					<picture>
+					<picture role="img">
 						<slot name="qr-code-image">No img provided</slot>
 					</picture>
 				</header>
