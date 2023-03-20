@@ -40,7 +40,7 @@ const styles = css`
 		padding: 0 var(--small-space);
 	}
 
-	::slotted(h2) {
+	::slotted(h1) {
 		font-weight: 700;
 		font-size: 1.4rem;
 		color: var(--dark-blue);
