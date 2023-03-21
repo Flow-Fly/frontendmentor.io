@@ -12,10 +12,10 @@ export class qrCode extends LitElement {
 						<slot name="qr-code-image">No img provided</slot>
 					</picture>
 				</header>
-				<main>
+				<div>
 					<slot name="title">No title provided</slot>
 					<slot name="description">No description provided</slot>
-				</main>
+				</div>
 			</article>
 		`
 	}
