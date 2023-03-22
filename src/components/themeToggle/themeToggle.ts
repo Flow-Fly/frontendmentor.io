@@ -1,4 +1,4 @@
-import { LitElement, html, CSSResultGroup, css } from "lit"
+import { LitElement, html, CSSResultGroup } from "lit"
 import { customElement, state, query, property } from "lit/decorators.js"
 import styles from "./style"
 @customElement("theme-toggle")
