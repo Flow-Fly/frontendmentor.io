@@ -1,0 +1,44 @@
+@font-face {
+	font-family: "Inter";
+	src: url(/fonts/inter/Inter-VariableFont_slnt\,wght.ttf) format("truetype");
+	font-weight: 100 900;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Inconsolata";
+	src: url(/fonts/inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf)
+		format("truetype");
+	font-weight: 100 900;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Lora";
+	src: url(/fonts/lora/Lora-VariableFont_wght.ttf) format("truetype");
+	font-weight: 100 900;
+	font-display: swap;
+}
+:root {
+	--dark-1: 0 0% 2%;
+	--dark-2: 0 0% 12%;
+	--dark-3: 0 0% 18%;
+	--dark-4: 0 0% 23%;
+	--light-1: 0 0% 51%;
+	--light-2: 0 0% 91%;
+	--light-3: 0 0% 96%;
+	--light-4: 0 0% 100%;
+	--purple: 274 82% 60%;
+	--red: 0 100% 66%;
+	--current-font: "Inter";
+	--heading-l: 4rem;
+	--heading-l: 1.5rem;
+	--heading-s: 1.25rem;
+	--text-m: 1.125rem;
+	--text-s: 0.875rem;
+	--line-h-l: 4.8125rem;
+	--line-h-m: 1.8125rem;
+	--line-h-s: 1.5rem;
+	--line-t-m: 1.5rem;
+	--line-t-s: 1.0625rem;
+	--horizontal-padding: 1.25rem;
+	--vertical-padding: 1.5rem;
+}

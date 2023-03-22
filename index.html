@@ -1,14 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="./src/main.ts" type="module"></script>
+		<title>Frontend Mentor | Dictionary web app</title>
+	</head>
+	<body>
+		<header>
+			<div class="first-header">
+				<picture>
+					<img src="images/logo.svg" alt="dictionary app logo" />
+				</picture>
+				<div class="actions">
+					<font-selector> </font-selector>
+					<div class="separator"></div>
+					<theme-toggle></theme-toggle>
+				</div>
+			</div>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Dictionary web app</title>
-</head>
-<body>
+			<div class="search">
+				<search-component api="https://api.dictionaryapi.dev/api/v2/entries/en">
+				</search-component>
+			</div>
+		</header>
+		<main>
+			<definition-displayer>
+				<!-- <section>
+					<div>
+						<h1>keyboard</h1>
+						<h2>/ˈkiːbɔːd/</h2>
+					</div>
+					<picture>
+						<img src="images/icon-play.svg" alt="play word spelling" />
+					</picture>
+				</section>
+				<article>
+					<header>
+						<h3 class="define">noun</h3>
+						<hr />
+					</header>
+					<h3>Meaning</h3>
+					<ul>
+						<li>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Molestiae temporibus consectetur corporis, aperiam obcaecati
+								tempore.
+							</p>
+						</li>
+						<li>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Molestiae temporibus consectetur corporis, aperiam obcaecati
+								tempore.
+							</p>
+						</li>
+						<li>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Molestiae temporibus consectetur corporis, aperiam obcaecati
+								tempore.
+							</p>
+						</li>
+					</ul>
+					<footer>
+						<h3>Synonyms</h3>
+						<h3><a href="#">electronic keyboard</a></h3>
+					</footer>
+				</article> -->
+			</definition-displayer>
+		</main>
+		<!-- <footer>
+			<p>Source</p>
+			<a href="#"
+				>https://en.wikitionary.org/wiki/keyboard
+				<figure>
+					<img src="images/icon-new-window.svg" alt="" /></figure
+			></a>
 
-</body>
+			<source-displayer> </source-displayer>
+		</footer> -->
+	</body>
 </html>

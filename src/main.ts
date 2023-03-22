@@ -1,24 +1,30 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter'
+import "./components"
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+const eventCatcher = document.body
+const displayer = document.querySelector("definition-displayer")
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+eventCatcher.addEventListener("change-theme", function (event) {
+	const theme = (event as CustomEvent).detail
+	document.documentElement.className = theme
+})
+
+eventCatcher.addEventListener("fetch-error", (event: Event) => {
+	event.stopImmediatePropagation()
+	const clonedEvent = cloneEvent(event as CustomEvent)
+	displayer?.dispatchEvent(clonedEvent)
+})
+
+eventCatcher.addEventListener("result-from-search", (event: Event) => {
+	event.stopImmediatePropagation()
+	const clonedEvent = cloneEvent(event as CustomEvent)
+	displayer?.dispatchEvent(clonedEvent)
+})
+
+function cloneEvent(event: CustomEvent): CustomEvent {
+	const clone = new CustomEvent(event.type, {
+		bubbles: true,
+		composed: true,
+		detail: event.detail,
+	})
+	return clone
+}
