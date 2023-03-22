@@ -9,12 +9,10 @@ This is a solution to the [Dictionary web app challenge on Frontend Mentor](http
   - [Overview](#overview)
     - [The challenge](#the-challenge)
   - [My process](#my-process)
+    - [Notes](#notes)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
     - [Continued development](#continued-development)
-    - [Useful resources](#useful-resources)
-  - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -40,10 +38,31 @@ Users should be able to:
   <img src="./public/images/dictionary-ipad.jpeg" alt="ipad screenshot" />
 </details>
 
-- Solution URL: [Add solution URL here](https://github.com/Flow-Fly/frontendmentor.io/tree/dictionary)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/Flow-Fly/frontendmentor.io/tree/dictionary](https://github.com/Flow-Fly/frontendmentor.io/tree/dictionary)
+- Live Site URL: [https://frontendmentor-flow-dictionary.netlify.app/](https://frontendmentor-flow-dictionary.netlify.app/)
 
 ## My process
+
+This is part of a serie of challenges I indulge myself to learn TypeScript, Lit (Web Components) and get better at CSS generally speaking.
+
+### Notes
+
+Best view using a Chromium browser.
+Sadly Firefox does not support:
+
+```css
+:host-context(selector) {
+}
+/* To infer styling inside a web-components, based on the "context" he is in
+    Typically, here, the dark / light theme.
+*/
+```
+
+```css
+:has(selector) {
+}
+/* It is available under flags but still not fully supported */
+```
 
 ### Built with
 
@@ -52,61 +71,27 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Lit](https://lit.dev/) - JS Web Component library
+- TypeScript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Just starting with webcomponents and TypeScript:
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-	color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-	console.log("🎉")
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+- Web components encapsulation can be painful
+  - I added a lot of styling that I eventually add to start over (in a not so clean way atm)
+- TypeScript is awesome
+- CustomEvent's are fun to play with (Learned that I can't re-route a dispatched Event, had to clone it then dispatch again.)
+- Need to improve on the overall structure of my web-components, the displayer one is way too huge and need some rework (just wanted to get it finished for now :) )
+- I still have a lot to improve on CSS wise.
+- Web components are a lot of fun.
+  - It would definitely have been easier with a framework like Vue / React
+- Loved working using [Responsively](https://responsively.app/)
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Cleanup the CSS and some Components, add some animations and improve UX :
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Input reset, quite simple but forgot to add that.
+- Closing the font-selector when clicking out of the box, for now we have to click on the label.
+- Make sure the font-selector is accesible (for now only the theme selector is)
