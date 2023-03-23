@@ -33,7 +33,7 @@ const styles = css`
 		width: 100%;
 	}
 
-	main {
+	article > div {
 		display: flex;
 		flex-direction: column;
 		gap: var(--small-space);
